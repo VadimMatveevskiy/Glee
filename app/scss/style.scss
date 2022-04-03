@@ -8,6 +8,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 45px 0;
     }
 }
 .logo{
@@ -32,11 +33,19 @@
 }
 .user-nav{
     display: flex;
+    margin-right: 10px;
     &__link{
         position: relative;
+        cursor: pointer;
     }
-    &__link + .user-nav__link{
+    &__link-cart{
         margin-left: 60px;
+    }
+    &__link-heart{
+        margin-left: 80px;
+    }
+    &__link-menu{
+        margin-left: 70px;
     }
     &__link-search::after,
     &__link-menu::after{
@@ -51,25 +60,23 @@
         border-radius: 50%;
         background-color: #edf1f4;
     }
-    &__link-img{
-        margin-bottom: 2px;
-    }
     &__link-menu::after{
         content: '';
         border: 1px solid #a3bbc8;
-        right: -10px;
+        right: -11px;
         background-color: #a3bbc8;
     }
     
     &__link-heart::after{
         content: '';
         position: absolute;
-        top: -13px;
-        right: -75px;
+        top: -12px;
+        right: -120px;
         z-index: -1;
-        border: 1px solid #fcd7b6;
+        border: 0px solid #fcd7b6;
         background-color: #fcd7b6;
-        padding: 21px 60px;
+        width: 180px;
+        height: 42px;
         border-radius: 20%;
     }
     &__link-cart::after{
@@ -80,17 +87,6 @@
         top: -8px;
         right: 42px;
         border-left: 1px solid #fde7d3;
-    }
-    &__link-cart::before{
-        content: '';
-        position: absolute;
-        top: -13px;
-        right: -35px;
-        z-index: -1;
-        border: 1px solid #fcd7b6;
-        background-color: #fcd7b6;
-        padding: 21px 60px;
-        border-radius: 20%;
     }
     &__link-num{
         position: absolute;
