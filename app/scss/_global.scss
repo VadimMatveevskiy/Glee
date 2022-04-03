@@ -4,8 +4,18 @@ body{
     line-height: 30px;
     @extend %DMSans-700
 }
-.container{
+.big-container{
     max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.average-container{
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.small-container{
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
