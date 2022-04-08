@@ -1,0 +1,15 @@
+<svg id="Группа_1" data-name="Группа 1" xmlns="http://www.w3.org/2000/svg" width="127" height="127" viewBox="0 0 127 127">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #a3bbc8;
+      }
+
+      .cls-1 {
+        opacity: 0.4;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="63.5" cy="63.5" r="63.5"/>
+  <circle class="cls-2" cx="63" cy="63" r="49"/>
+</svg>
