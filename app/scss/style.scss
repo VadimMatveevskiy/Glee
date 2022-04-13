@@ -949,4 +949,24 @@
     }
 }
 
+.terms{
+    padding: 120px 0 50px;
+    &__title{
+        text-align-last: left;
+        margin-bottom: 30px;
+        color: $accent-title;
+    }
+    &__item{
+        margin-bottom: 35px;
+        margin-left: 40px;
+        color: $accent-title;
+    }
+    &__text,
+    &__list{
+        margin-bottom: 70px;
+        color: $accent-title;
+        list-style-type: decimal-leading-zero;
+    }
+}
+
 @import 'media';
