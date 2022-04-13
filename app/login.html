@@ -69,7 +69,6 @@
         </div>
     </header>
     <main class="main">
-        
         <section class="top">
             <div class="breadcrumbs">
                 <h2 class="breadcrumbs__title title">Log in</h2>
@@ -81,6 +80,29 @@
                         <a class="breadcrumbs__link" href="#">Log in</a>
                     </li>
                 </ul>
+            </div>
+        </section>
+
+        <section class="modal">
+            <div class="container">
+                <form class="modal__form" action="#">
+                    <label class="modal__label">
+                        Username or email address *
+                        <input class="modal__input" type="text" required>
+                    </label>
+                    <label class="modal__label">
+                        Password *
+                        <input class="modal__input" type="password" required>
+                    </label>
+                    <button class="modal__btn">Login</button>
+                    <label class="modal__label-text">
+                        <input type="checkbox">
+                        <p class="modal__text">Remember me</p>
+                        <a class="modal__error" href="#">Lost your password?</a>
+                    </label>
+                </form>
+                <p class="modal__problem">Not registered? No problem</p>
+                <a class="modal__link" href="register.html">Create an account</a>
             </div>
         </section>
 
