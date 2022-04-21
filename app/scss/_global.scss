@@ -62,11 +62,7 @@ body{
         display: flex;
         justify-content: center;
     }
-    &__{
-        
-    }
     &__link{
-        margin: 0 7.5px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -74,6 +70,9 @@ body{
         border: 1px solid #a3bbc8;
         width: 50px;
         height: 50px;
+    }
+    &__item + .pagination__item{
+        margin-left: 15px;
     }
     &__link-next{
         padding: 0 15px;
