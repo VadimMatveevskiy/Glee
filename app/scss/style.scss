@@ -385,7 +385,6 @@
         max-width: 1192px;
         padding: 0 15px;
         width: 100%;
-        
     }
 
     &__img-box {
@@ -556,10 +555,12 @@
         font-size: 16px;
         line-height: 40px;
         color: $accent-title;
+        text-align: center;
     }
 
     &__items-price {
         color: #a3bbc8;
+        text-align: center;
     }
 }
 
@@ -1302,9 +1303,10 @@
 }
 
 .product-one{
-    padding: 120px 0;
+    padding: 120px 0 60px;
     &__inner{
         display: flex;
+        margin-bottom: 100px;
     }
 }
 
@@ -1454,6 +1456,7 @@
         text-transform: uppercase;
         font-size: 15px;
         @extend %Rubik-400;
+        cursor: pointer;
     }
     &__list-link{
         color: $default;
@@ -1602,4 +1605,79 @@
         }
     }
 }
+.product-tabs{
+    padding-bottom: 120px;
+    &__top{
+        text-align: center;
+        margin-bottom: 45px;
+    }
+    &__top-item{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        color: $accent-title;
+        background-color: #edf1f4;
+        width: 240px;
+        height: 50px;
+        & + .product-tabs__top-item,
+        span{
+            margin-left: 5px;
+        }
+        &.product-tabs__top-item--active{
+            background-color: #a3bbc8;
+            color: #fff;
+        }
+    }
+    &__content-item{
+        display: none;
+        &.product-tabs__content-item--active{
+            display: block;
+        }
+    }
+}
+.product-related{
+    position: relative;
+    &__title{
+        margin-bottom: 75px;
+        @extend %DMSans-700;
+        color: $accent-title;
+        font-size: 36px;
+    }
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+    .product-top__items-item{
+        margin: 30px 15px;
+    }
+    .product-top__items-item + .product-top__items-item{
+        // margin-left: 35px;
+    }
+    .slick-arrow{
+        position: absolute;
+        background-color: transparent;
+        border: 2px solid #a3bbc8;
+        font-size: 0;
+        
+        background-repeat: no-repeat;
+        background-position: center center;
+        border-radius: 5px;
+        padding: 0;
+        width: 46px;
+        height: 46px;
+        top: -60px;
+    }
+    .slick-next{
+        right: 20px;
+        background-image: url('../images/icon/arrow-blog.svg');
+    }
+    .slick-prev{
+        right: 90px;
+        background-image: url('../images/icon/arrow-blog-left.svg');
+    }
+    .slick-disabled{
+        border-color: #edf1f4;
+    }
+}
+
 @import 'media';
