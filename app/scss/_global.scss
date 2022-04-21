@@ -56,3 +56,29 @@ body{
     background-color: transparent;
 }
 }
+
+.pagination{
+    &__list{
+        display: flex;
+        justify-content: center;
+    }
+    &__link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $accent-title;
+        border: 1px solid #a3bbc8;
+        width: 50px;
+        height: 50px;
+    }
+    &__item + .pagination__item{
+        margin-left: 15px;
+    }
+    &__link-next{
+        padding: 0 15px;
+    }
+    &__link--active{
+        color: #fff;
+        background-color: #a3bbc8;
+    }
+}
