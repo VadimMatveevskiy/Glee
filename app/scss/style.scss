@@ -1931,4 +1931,155 @@
     }
 }
 
+.contact{
+    padding: 120px;
+    text-align: center;
+    &__link{
+        display: inline-block;
+        font-size: 16px;
+        color: #a3bbc8;
+        margin-bottom: 10px;
+    }
+    &__title{
+        color: #436372;
+        @extend %DMSans-700;
+        font-size: 35px;
+        margin-bottom: 70px;
+    }
+}
+.contact-info{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 120px;
+    &__item{
+        width: 370px;
+        height: 385px;
+        background-color: #fbfbfb;
+        border: 3px solid #fff;
+        &:hover{
+            border: 3px solid #a3bbc8;
+            .contact-info__item-img{
+                background-color: #a3bbc8;
+                path{
+                    fill: #fff;
+                }
+            }
+        }
+    }
+    &__item-img{
+        margin-top: 70px;
+        margin-bottom: 65px;
+        background-color: #fff;
+        width: 80px;
+        height: 80px;
+        border-radius: 15px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__item-title{
+        margin-bottom: 25px;
+        color: #222;
+        @extend %DMSans-700;
+        font-size: 20px;
+    }
+    &__item-text,
+    &__item-link{
+        color: #565872;
+        @extend %Rubik-400;
+    }
+}
+.contact-box{
+    display: flex;
+    &__form{
+        width: 620px;
+    }
+    &__form-box{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    &__form-icon{
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            width: 14px;
+            height: 13px;
+            background-image: url('../images/icon/user-blog-one.svg');
+        }
+    }
+    &__form-icon--email{
+        &::before{
+            background-image: url('../images/icon/email.svg');
+            width: 18px;
+            height: 12px;
+        }
+    }
+    &__form-icon--textarea{
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            right: -290px;
+            top: 20px;
+            width: 18px;
+            height: 15px;
+            background-image: url('../images/icon/message.svg');
+        }
+    }
+    &__form-input{
+        padding: 0 20px;
+        width: 260px;
+        height: 50px;
+        border: 1px solid #e5e5e5;
+        color: #333;
+        outline: none;
+        &:focus{
+            border: 1px solid #a3bbc8;
+        }
+        &::placeholder{
+            color: #999;
+        }
+    }
+    &__form-textarea{
+        display: block;
+        resize: none;
+        min-width: 580px;
+        padding: 10px 20px;
+        border: 1px solid #e5e5e5;
+        height: 120px;
+        margin-bottom: 40px;
+        color: #333;
+        outline: none;
+        &:focus{
+            border: 1px solid #a3bbc8;
+        }
+        &::placeholder{
+            color: #999;
+        }
+    }
+    &__form-btn{
+        display: block;
+        width: 190px;
+        height: 50px;
+        background-color: #a3bbc8;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px
+    }
+    &__map{
+        width: 500px;
+        height: 335px;
+    }
+}
+#map{
+    min-width: 530px;
+    height: 335px;
+    margin-left: 50px;
+}
+
 @import 'media';
