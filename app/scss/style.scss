@@ -768,6 +768,9 @@
     }
 
     &__item-text {
+        font-size: 18px;
+        @extend %DMSans-500;
+        color: #262626;
         padding-top: 285px;
         border-bottom: 1px solid #e0e0e0;
         width: 315px;
@@ -776,8 +779,36 @@
     }
 
     &__item-date {
-        padding: 15px 0;
+        font-size: 12px;
+        padding: 15px 15px;
         margin-left: 30px;
+        color: #222933;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 13px;
+            height: 13px;
+            background-image: url('../images/icon/calendar-accent.svg');
+            left: 0;
+            top: 23px;
+        }
+    }
+    &__item-autor{
+        font-size: 12px;
+        margin-left: 30px;
+        display: inline-block;
+        color: #222933;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 13px;
+            height: 13px;
+            background-image: url('../images/icon/user.svg');
+            left: -15px;
+            top: 9px;
+        }
     }
 }
 
