@@ -1,0 +1,123 @@
+
+.articles {
+    padding-top: 60px;
+}
+
+.articles-top {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+    &__view {
+        color: #262626;
+        position: relative;
+        margin-right: 25px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            background-image: url(../images/icon/arrow-articles.svg);
+            background-repeat: no-repeat;
+            top: 8px;
+            right: -25px;
+            height: 11px;
+            width: 6px;
+        }
+    }
+}
+
+.articles-content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    z-index: 4;
+
+    &__item {
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 370px;
+        min-height: 420px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        background-color: #fff;
+    }
+
+    &__item-news {
+        font-size: 14px;
+        color: #fff;
+        top: 235px;
+        position: absolute;
+        width: 42px;
+        margin-left: 30px;
+        background-image: url(../images/articles-news-bg.png);
+        background-repeat: no-repeat;
+        padding: 0px 32px;
+    }
+
+    &__item-text {
+        font-size: 18px;
+        @extend %DMSans-500;
+        color: #262626;
+        padding-top: 285px;
+        border-bottom: 1px solid #e0e0e0;
+        width: 315px;
+        flex-grow: 1;
+        margin-left: 30px;
+    }
+
+    &__item-date {
+        font-size: 12px;
+        padding: 15px 15px;
+        margin-left: 30px;
+        color: #222933;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 13px;
+            height: 13px;
+            background-image: url('../images/icon/calendar-accent.svg');
+            left: 0;
+            top: 23px;
+        }
+    }
+    &__item-autor{
+        font-size: 12px;
+        margin-left: 30px;
+        display: inline-block;
+        color: #222933;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 13px;
+            height: 13px;
+            background-image: url('../images/icon/user.svg');
+            left: -15px;
+            top: 9px;
+        }
+    }
+}
+
+.partner {
+    padding: 260px 0 90px;
+    background-color: #fef7f0;
+    margin-top: -185px;
+
+    &__page {
+        padding: 90px 0;
+        background-color: #fef7f0;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.partner-page {
+    padding: 90px 0;
+    background-color: #fef7f0;
+}

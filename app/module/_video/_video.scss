@@ -1,0 +1,23 @@
+.video {
+    margin: 60px 0px;
+
+    &__img {
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 501px;
+        background-position: center center;
+        z-index: 4;
+    }
+
+    &__link {
+        position: absolute;
+        background-image: url(../images/icon/video-play.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        left: 48%;
+        top: 40%;
+        height: 127px;
+        width: 127px;
+    }
+}
