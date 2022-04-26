@@ -31,7 +31,7 @@
     display: flex;
     justify-content: space-between;
     z-index: 4;
-
+    flex-wrap: wrap;
     &__item {
         background-repeat: no-repeat;
         background-size: contain;
@@ -41,6 +41,9 @@
         flex-direction: column;
         position: relative;
         background-color: #fff;
+        &+.articles-content__item{
+            margin-left: 15px;
+        }
     }
 
     &__item-news {
@@ -103,7 +106,7 @@
 .partner {
     padding: 260px 0 90px;
     background-color: #fef7f0;
-    margin-top: -185px;
+    margin-top: -225px;
 
     &__page {
         padding: 90px 0;
@@ -120,4 +123,63 @@
 .partner-page {
     padding: 90px 0;
     background-color: #fef7f0;
+}
+
+@media (max-width: 1200px){
+    .articles-top{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .articles-content{
+        justify-content: center;
+        &__item{
+            margin-bottom: 40px;
+        }
+    }
+    .partner{
+        margin-top: -210px;
+        &__items{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__item{
+            margin: 0 10px 20px 10px;
+        }
+    }
+}
+@media (max-width: 400px){
+    .articles-content{
+        &__item{
+            min-height: 370px;
+        }
+        &__item-news{
+            top: 209px;
+        }
+        &__item-text{
+            width: 100%;
+            margin-left: 10px;
+            padding-top: 235px;
+        }
+        &__item-date{
+            margin-left: 10px;
+        }
+    }
+}
+@media (max-width: 320px){
+    .articles-content{
+        &__item{
+            min-height: 370px;
+        }
+        &__item-news{
+            top: 165px;
+        }
+        &__item-text{
+            width: 100%;
+            margin-left: 10px;
+            padding-top: 200px;
+        }
+        &__item-date{
+            margin-left: 10px;
+        }
+    }
 }

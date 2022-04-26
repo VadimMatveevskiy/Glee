@@ -4,6 +4,7 @@
     &__items {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         max-width: 1192px;
         padding: 0 15px;
         width: 100%;
@@ -189,6 +190,9 @@
 .mixitup-control-active {
     color: $grid-title;
 }
+.mix-subtitle{
+    margin-bottom: 20px;
+}
 
 .product-bottom {
     margin-top: 110px;
@@ -202,38 +206,17 @@
 
     &__item {
         position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
         background-color: #feefe2;
         margin-bottom: 90px;
+        width: 870px;
+        height: 370px;
+    }
 
-        &:nth-child(1) {
-            padding: 90px 140px 105px 405px;
-
-            &::before {
-                content: '';
-                position: absolute;
-                background-image: url(../images/content/prodect-bottom/Mirum-Notare-Tellus.png);
-                background-repeat: no-repeat;
-                height: 405px;
-                width: 233px;
-                left: 150px;
-                top: -100px;
-            }
-        }
-
-        &:nth-child(2) {
-            padding: 74px 140px 89px 405px;
-
-            &::before {
-                content: '';
-                position: absolute;
-                background-image: url(../images/content/prodect-bottom/Malesuada-Tempor.png);
-                background-repeat: no-repeat;
-                height: 399px;
-                width: 222px;
-                left: 150px;
-                top: -90px;
-            }
-        }
+    &__item-img{
+        margin-top: -160px;
     }
 
     &__item-title {
@@ -266,6 +249,50 @@
             right: 18px;
             top: 28px;
 
+        }
+    }
+}
+@media (max-width:1400px ){
+    .product-bottom{
+        margin-top: 60px;
+        &__items{
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width:1400px ){
+    .mix-subtitle{
+        flex-wrap: wrap;
+        &__item {
+            margin-bottom: 0px; 
+        }
+    }
+    .product-top{
+        &__items{
+            padding: 0;
+        }
+    }
+}
+@media (max-width:600px ){
+    .product-top{
+        padding: 25px 0;
+        &__title{
+            margin-bottom: 30px;
+        }
+        &__items-item{
+            padding: 15px 0 25px;
+            margin: 0px 5px 15px 5px;
+        }
+    }
+    .product-bottom{
+        margin-top: 10px;
+        &__item{
+            padding: 0 15px;
+            margin-bottom: 20px;
+        }
+        &__item-img{
+            display: none;
         }
     }
 }

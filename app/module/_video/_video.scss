@@ -11,13 +11,32 @@
     }
 
     &__link {
-        position: absolute;
-        background-image: url(../images/icon/video-play.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        left: 48%;
-        top: 40%;
-        height: 127px;
-        width: 127px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 501px;
+    }
+}
+
+@media (max-width: 1600px){
+    .video{
+        margin: 0;
+        &__img{
+            background-size: cover;
+        }
+    }
+}
+@media (max-width: 600px){
+    .video{
+        &__img,
+        &__link{
+            height: 300px;
+        }
+        &__link{
+            img{
+                width: 75px;
+                height: 75px;
+            }
+        }
     }
 }

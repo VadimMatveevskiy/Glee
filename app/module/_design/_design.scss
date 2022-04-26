@@ -2,12 +2,14 @@
     padding: 10px 0 60px;
 
     &__items {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        display: flex;
+        flex-wrap: wrap;
         grid-gap: 30px;
+        justify-content: center;
     }
 
     &__item {
+        box-sizing: border-box;
         background-repeat: no-repeat;
         background-position: right;
         background-color: #f8f8f8;
@@ -16,11 +18,11 @@
         padding: 40px 0 0 38px;
 
         &:nth-child(3) {
-            background-position-x: 250px;
+            background-position-x: 230px;
         }
 
         &:nth-child(5) {
-            background-position-x: 230px;
+            background-position-x: 210px;
         }
     }
 
@@ -34,5 +36,23 @@
 
     &__item-subtitle {
         color: #a3bbc8;
+    }
+}
+
+@media (max-width: 400px) {
+    .design {
+        padding: 10px 0 30px;
+        &__item {
+            height: 300px;
+            background-position: bottom;
+
+            &:nth-child(3) {
+                background-position: bottom right;
+            }
+
+            &:nth-child(5) {
+                background-position: bottom right;
+            }
+        }
     }
 }
