@@ -1,0 +1,271 @@
+.product-top {
+    padding: 75px 0;
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1192px;
+        padding: 0 15px;
+        width: 100%;
+    }
+
+    &__img-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 270px;
+        max-height: 300px;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+
+        &:hover {
+            .product-top__items-box {
+                transform: translateY(-50px);
+            }
+        }
+    }
+
+    &__items-box {
+        display: flex;
+        justify-content: center;
+        right: 0;
+        left: 0;
+        position: absolute;
+        top: 220px;
+        transform: translateY(500%);
+        transition: all .3s;
+    }
+
+    &__items-link {
+        background-color: #fff;
+        border-radius: 50%;
+        margin: 0 7px;
+        width: 45px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+        line-height: 0;
+        span{
+            font-size: 0;
+        }
+        &:hover {
+            background-color: #a3bbc8;
+
+            path {
+                fill: rgb(255, 255, 255)
+            }
+        }
+    }
+
+    &__items-item {
+        max-width: 275px;
+        min-height: 380px;
+        box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 25px 0 40px;
+        margin: 0 14px 40px 14px;
+        .star{
+            display: none;
+        }
+        &.product-top__items-item--list{
+            max-width: 900px;
+            width: 100%;
+            max-height: 500px;
+            height: 100%;
+            flex-direction: row;
+            padding: 0;
+            min-height: 0;
+            box-shadow: none;
+            .star{
+                display: block;
+                padding: 0;
+            }
+            .product-top__items-title{
+                font-size: 40px;
+                color: #333;
+                margin-bottom: 25px;
+                margin-top: -50px;
+            }
+            .product-top__items-price{
+                color: #333;
+                font-size: 30px;
+                margin: 35px 0 40px;
+            }
+            .product-top__items-text{
+                display: inline-block;
+            }
+            .product-top__img-box{
+                max-width: 370px;
+                width: 100%;
+                min-height: 500px;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid #f2f2f2;
+                margin-right: 60px;
+                overflow: visible;
+            }
+            .product-top__items-img{
+                margin: 0;
+                width: 300px;
+            }
+            .product-top__items-box{
+                top: auto;
+                bottom: 60px;
+                transform: translateY(0);
+                right: -180px;
+                left:auto;
+                
+            }
+            .product-top__items-search{
+                display: none;
+            }
+            .product-top__items-link{
+                width: 50px;
+                height: 50px;
+                border-radius: 0%;
+                &:hover {
+                    background-color: #fff;
+                    path {
+                        fill: rgb(163, 187, 200);
+                    }
+                }
+            }
+            .product-top__items-link--active{
+                position: relative;
+                background-color: #a3bbc8;
+                color: #fff;
+                text-transform: uppercase;
+                @extend %Rubik-400;
+                transition: all .3s;
+                path{
+                    fill: rgb(255, 255, 255);
+                }
+                &:hover{
+                    left: 160px;
+                    width: 208px;
+                    height: 50px;
+                    background-color: #a3bbc8;
+                    border-radius: 5px;
+                    span{
+                        font-size: 15px;
+                    }
+                    svg{
+                        display: none;
+                    }
+                }
+            }
+            
+        }
+    }
+    &__items-text{
+        display: none;
+    }
+    &__items-img {
+        margin-top: auto;
+        margin-bottom: 90px;
+    }
+
+    &__items-title {
+        font-size: 16px;
+        line-height: 40px;
+        color: $accent-title;
+        text-align: center;
+    }
+
+    &__items-price {
+        color: #a3bbc8;
+        text-align: center;
+    }
+}
+
+.mixitup-control-active {
+    color: $grid-title;
+}
+
+.product-bottom {
+    margin-top: 110px;
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        position: relative;
+        background-color: #feefe2;
+        margin-bottom: 90px;
+
+        &:nth-child(1) {
+            padding: 90px 140px 105px 405px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                background-image: url(../images/content/prodect-bottom/Mirum-Notare-Tellus.png);
+                background-repeat: no-repeat;
+                height: 405px;
+                width: 233px;
+                left: 150px;
+                top: -100px;
+            }
+        }
+
+        &:nth-child(2) {
+            padding: 74px 140px 89px 405px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                background-image: url(../images/content/prodect-bottom/Malesuada-Tempor.png);
+                background-repeat: no-repeat;
+                height: 399px;
+                width: 222px;
+                left: 150px;
+                top: -90px;
+            }
+        }
+    }
+
+    &__item-title {
+        font-size: 22px;
+        line-height: 32px;
+        margin-bottom: 30px;
+        text-align: left;
+        max-width: 260px;
+    }
+
+    &__item-subtitle {
+        max-width: 340px;
+        margin-bottom: 35px;
+    }
+
+    &__item-link {
+        position: relative;
+        font-size: 15px;
+        color: #436372;
+        border: 1px solid #b3b7b5;
+        border-radius: 5%;
+        padding: 23px 85px 23px 20px;
+
+        &::after {
+            position: absolute;
+            content: '';
+            background-image: url(../images/icon/arrow-accent.svg);
+            width: 22px;
+            height: 9px;
+            right: 18px;
+            top: 28px;
+
+        }
+    }
+}
