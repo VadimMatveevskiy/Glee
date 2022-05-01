@@ -33,6 +33,7 @@
     z-index: 4;
     flex-wrap: wrap;
     &__item {
+        cursor: pointer;
         background-repeat: no-repeat;
         background-size: contain;
         width: 370px;
